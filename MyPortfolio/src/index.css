@@ -1,0 +1,150 @@
+/* Import Google Font */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: jura;
+  background: radial-gradient(circle at top left, #0f1117, #0c0e13);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Section spacing */
+/* section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+p {
+  color: #b3b3b3;
+  font-size: 15px;
+}
+
+/* Buttons global style */
+button, .btn {
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0e13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4ad991;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38b97c;
+}
+
+/* Container glow effect */
+.container {
+  background: #14161c;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05),
+              0 0 40px rgba(74, 217, 145, 0.15);
+  margin: 20px 0;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./assets/fonts/Jura-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Jura-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./assets/fonts/Jura-Light.woff2') format('woff2'),
+        url('./assets/fonts/Jura-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./assets/fonts/Jura-Medium.woff2') format('woff2'),
+        url('./assets/fonts/Jura-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./assets/fonts/Jura-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Jura-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('./assets/fonts/Jura-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/Jura-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

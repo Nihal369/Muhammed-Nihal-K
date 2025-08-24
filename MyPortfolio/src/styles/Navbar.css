@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1f26;
+  padding: 15px 40px;
+  border-radius: 30px;
+  margin: 20px auto;
+  width: 85%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  font-size: 18px;
+  color: #bbb;
+  font-weight: 400;
+}
+
+.logo span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 16px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar ul li a.active {
+  color: #fff; /* matches hover color */
+}
+
+.navbar ul li a.active::after {
+  transform: scaleX(1); /* keeps underline visible */
+}
+
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #fff;
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
