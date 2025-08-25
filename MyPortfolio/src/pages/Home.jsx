@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/home.css";
+import "../styles/Home.css";
 import profile from "../assets/images/profile.png"; // put your image in /src/assets
 import resume from "../assets/images/resume.png"
 

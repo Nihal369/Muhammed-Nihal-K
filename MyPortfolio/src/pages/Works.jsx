@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/works.css";
+import "../styles/Works.css";
 
 const projects = [
   { title: "E-Commerce Site", desc: "React + Django full-stack shopping site" },
