@@ -6,7 +6,7 @@
   padding: 15px 40px;
   border-radius: 30px;
   margin: 20px auto;
-  width: 85%;
+  width: 64%;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
@@ -61,4 +61,29 @@
 
 .navbar ul li a:hover::after {
   transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 880px){
+  .navbar{
+    display: flex;
+    justify-content: center;
+  }
+  .logo{
+    display: none;
+  }
+}
+
+@media (max-width: 470px){
+  .navbar{
+    width: 340px;
+  }
 }

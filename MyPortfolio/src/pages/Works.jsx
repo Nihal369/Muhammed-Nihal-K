@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Works.css";
+// import Projects from "./Projects";
 
 const projects = [
   { title: "E-Commerce Site", desc: "React + Django full-stack shopping site" },
@@ -9,17 +10,21 @@ const projects = [
 
 const Works = () => {
   return (
-    <div className="works-container">
-      <h2>My Works</h2>
-      <div className="projects-grid">
-        {projects.map((p, i) => (
-          <div className="project-card" key={i}>
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-          </div>
-        ))}
+    <div id="work">
+      <div className="works-container">
+        <h2>My Works</h2>
+        <div className="projects-grid">
+          {projects.map((p, i) => (
+            <div className="project-card" key={i}>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
+      {/* <Projects /> */}
     </div>
+    
   );
 };
 

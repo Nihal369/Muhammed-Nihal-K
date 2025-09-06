@@ -17,10 +17,11 @@
 }
 
 .about-container p {
-  max-width: 700px;
+  max-width: 756px;
   margin: 0 auto 40px;
   color: #aaa;
   line-height: 1.6;
+  font-size: 20px;
 }
 
 .skills {
@@ -32,7 +33,7 @@
 
 .skill-card {
   background: #1a1d24;
-  padding: 15px 25px;
+  padding: 18px 28px;
   border-radius: 10px;
   font-weight: 500;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);

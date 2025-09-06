@@ -1,15 +1,90 @@
+import React from "react";
+
 export default function ProjectCard({ title, description, image, demoLink, codeLink }) {
   return (
-    <div className="bg-[#1e1e1e] shadow-lg rounded-lg overflow-hidden border border-gray-700">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-4">
-        <h3 className="text-lg font-bold text-white">{title}</h3>
-        <p className="text-gray-400 mt-2">{description}</p>
-        <div className="mt-4 flex gap-2">
-          <a href={demoLink} target="_blank" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Demo</a>
-          <a href={codeLink} target="_blank" className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600">Code</a>
+    <>
+      <style>{`
+        .project-card {
+          background: #1e1e1e;
+          border: 1px solid #444;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+          transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .project-image {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .project-content {
+          padding: 16px;
+        }
+
+        .project-content h3 {
+          font-size: 18px;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 8px;
+        }
+
+        .project-content p {
+          font-size: 14px;
+          color: #aaa;
+          margin-bottom: 12px;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 8px 14px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 600;
+          transition: background 0.3s ease;
+        }
+
+        .btn.demo {
+          background: #007bff;
+          color: #fff;
+        }
+
+        .btn.demo:hover {
+          background: #0056b3;
+        }
+
+        .btn.code {
+          background: #444;
+          color: #fff;
+        }
+
+        .btn.code:hover {
+          background: #666;
+        }
+      `}</style>
+
+      <div className="project-card">
+        <img src={image} alt={title} className="project-image" />
+        <div className="project-content">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <div className="buttons">
+            <a href={demoLink} target="_blank" rel="noreferrer" className="btn demo">Demo</a>
+            <a href={codeLink} target="_blank" rel="noreferrer" className="btn code">Code</a>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
