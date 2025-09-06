@@ -308,7 +308,7 @@
   .contact {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   position: relative;
   top: 25px;
@@ -320,7 +320,7 @@
 
   .work{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -356,6 +356,23 @@
     left: 18px; */
     /* bottom: 730px;
     right: 6px; */
+  }
+  .contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  position: relative;
+  top: 25px;
+  }
+
+  .work{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
 }
 
@@ -400,12 +417,23 @@
   .home-container-1{
     width: 100%;
   }
-  .home-container-1 .profile-card{
+  /* .home-container-1 .profile-card{
     width: 100%;
-  }
+  } */
   .home-container-2{
     /* width: 300px; */
   }
 
 }
+
+@media (max-width: 460px){
+  .home-container-1{
+    width: 395px;
+  }
+  .home-container-2{
+    width: 395px;
+  }
+}
+
+
 
