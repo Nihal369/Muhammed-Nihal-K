@@ -9,6 +9,12 @@ import Instagram from "../assets/images/instagram.svg"
 import Github from "../assets/images/github.svg"
 import Twitter from "../assets/images/twitter.svg"
 import resume from "../assets/images/resume.png"
+import Up from "../assets/images/up.svg"
+import Down from "../assets/images/down.svg"
+import Design from "../assets/images/web-designer.svg"
+import Development from "../assets/images/web-development.svg"
+import Mobile from "../assets/images/mobile.svg"
+import Camera from "../assets/images/camera.svg"
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
@@ -22,8 +28,11 @@ const Home = () => {
               <h2 className="name">Muhammed <span>Nihal</span> K</h2>
               <p>Full-Stack Developer</p>
             </div>
-            <button className="expand" onClick={() => setExpanded(!expanded)}>
+            <button className="expand-1" onClick={() => setExpanded(!expanded)}>
               {expanded ? "Show Less" : "Show More"}
+            </button>
+            <button className="expand-2" onClick={() => setExpanded(!expanded)}>
+              <img src={expanded ? Up : Down} alt="toggle" className="expand-icon" />
             </button>
           </div>
           <div className="contact">
@@ -35,7 +44,7 @@ const Home = () => {
               </div>
             </div>
             <div className="cont">
-              <img src={phone} alt="phone" />
+              <a href="tel:+916282455711"><img src={phone} alt="phone" /></a>
               <div>
                 <h6>PHONE</h6>
                 <p><a href="tel:+916282455711">+91 6282455711</a></p>
@@ -74,8 +83,39 @@ const Home = () => {
             <div className="skill-card">Python</div>
             <div className="skill-card">MongoDB</div>
           </div>
+
+
           <div className="work">
-            <h4>What I'm Doing</h4>
+            <h2 className="about">What I'm Doing</h2>
+            <div className="saprator"></div>
+            <div className="service">
+              <img className="service-logo" src={Design} alt="" />
+              <div>
+                <h4>Web design</h4>
+                <p>The most modern and high-quality design made at a professional level.</p>
+              </div>
+            </div>
+            <div className="service">
+              <img className="service-logo" src={Development} alt="" />
+              <div>
+                <h4>Web development</h4>
+                <p>High-quality development of sites at the professional level.</p>
+              </div>
+            </div>
+            <div className="service">
+              <img className="service-logo" src={Mobile} alt="" />
+              <div>
+                <h4>Mobile apps</h4>
+                <p>Professional development of applications for iOS and Android.</p>
+              </div>
+            </div>
+            <div className="service">
+              <img className="service-logo" src={Camera} alt="" />
+              <div>
+                <h4>Photography</h4>
+                <p>I make high-quality photos of any category at a professional level</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
