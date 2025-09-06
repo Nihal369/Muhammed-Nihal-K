@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 import profile from "../assets/images/profile.png"; 
 import mail from "../assets/images/mail.svg"
@@ -11,16 +11,20 @@ import Twitter from "../assets/images/twitter.svg"
 import resume from "../assets/images/resume.png"
 
 const Home = () => {
+  const [expanded, setExpanded] = useState(false);
   return (
     <div id="Home">
       <div className="home">
-        <div className="home-container-1">
+        <div className={`home-container-1 ${expanded ? "expanded" : ""}`}>
           <div className="profile-card">
             <img src={profile} alt="profile" className="profile-pic" />
             <div className="intro">
-            <h2 className="name">Muhammed <span>Nihal</span> K</h2>
-            <p>Full-Stack Developer</p>
-          </div>
+              <h2 className="name">Muhammed <span>Nihal</span> K</h2>
+              <p>Full-Stack Developer</p>
+            </div>
+            <button className="expand" onClick={() => setExpanded(!expanded)}>
+              {expanded ? "Show Less" : "Show More"}
+            </button>
           </div>
           <div className="contact">
             <div className="cont">
@@ -51,6 +55,8 @@ const Home = () => {
               <img src={Instagram} alt="" />
           </div>
         </div>
+
+
         <div className="home-container-2">
           <div className="intro">
             <h2 className="about">About</h2>
