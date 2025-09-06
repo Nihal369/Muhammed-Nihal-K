@@ -266,10 +266,10 @@
 
 @media (max-width: 580px){
   .home-container-1{
-    width: 450px;
+    width: 100%;
   }
   .home-container-2{
-    width: 450px;
+    width: 100%;
   }
 }
 
@@ -279,7 +279,7 @@
     height: 170vh;
   } */
   .home-container-1{
-    width: 300px;
+    /* width: 300px; */
     height: 510px;
   }
   .home-container-1 .profile-card{
@@ -288,7 +288,7 @@
     align-items: center;
   }
   .home-container-2{
-    width: 300px;
+    /* width: 300px; */
   }
 
 }
