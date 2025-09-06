@@ -1,6 +1,6 @@
 /* ====== HOME WRAPPER ====== */
 #Home {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,20 +214,19 @@
     margin-top: 5px;
 }
 
-.intro .saprator{
 
-}
 
 @media (max-width: 1270px) {
-  #Home{
+  /* #Home{
     height: 140vh;
-  }
+  } */
   .home{
     position: relative;
     display: grid;
     justify-items: center;
     bottom: 20px;
     gap: 24px;
+    margin-top: 32px;
   }
   .home-container-1{
     display: flex;
@@ -252,9 +251,9 @@
 }
 
 @media (max-width: 930px){
-  #Home{
+  /* #Home{
     height: 160vh;
-  }
+  } */
   .home-container-1{
     display: block;
     width: 550px;
@@ -276,9 +275,9 @@
 
 
 @media (max-width: 470px){
-  #Home{
+  /* #Home{
     height: 170vh;
-  }
+  } */
   .home-container-1{
     width: 300px;
     height: 510px;
