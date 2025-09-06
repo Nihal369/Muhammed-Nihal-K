@@ -59,9 +59,12 @@ const Home = () => {
             </div>
           </div>
           <div className="social">
-              <img src={Github} alt="" />
-              <img src={Twitter} alt="" />
-              <img src={Instagram} alt="" />
+            <a href="https://github.com/Nihal369"><img src={Github} alt="" /></a>
+            <a href=""><img src={Twitter} alt="" /></a>
+            <a href=""><img src={Instagram} alt="" /></a>
+              
+              
+              
           </div>
         </div>
 

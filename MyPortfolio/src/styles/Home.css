@@ -47,6 +47,9 @@
 
 .home-container-1 .intro {
   justify-items: center;
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
 }
 
 /* ====== IMAGE ====== */
@@ -433,11 +436,29 @@
   .home-container-2{
     width: 395px;
   }
-
+  .home-container-1 .profile-card{
+    display: flex;
+    gap: 20px;
+  }
+  .intro .name{
+    font-size: 18px;
+  }
   .work .service{
     width: 340px;
   }
 }
 
+@media (max-width: 410px){
+  .home-container-1{
+    width: 365px;
+  }
+  .home-container-2{
+    width: 365px;
+  }
+
+  .work .service{
+    width: 340px;
+  }
+}
 
 
