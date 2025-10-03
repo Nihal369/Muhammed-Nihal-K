@@ -79,13 +79,13 @@ const Home = () => {
               work at top global companies like Google or Microsoft. I value continuous learning, problem-solving, 
               and creating technology that makes life easier.</p>
           </div>
-          <div className="skills">
+          {/* <div className="skills">
             <div className="skill-card">React</div>
             <div className="skill-card">Django</div>
             <div className="skill-card">JavaScript</div>
             <div className="skill-card">Python</div>
             <div className="skill-card">MongoDB</div>
-          </div>
+          </div> */}
 
 
           <div className="work">
