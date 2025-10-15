@@ -18,113 +18,187 @@ import Camera from "../assets/images/camera.svg"
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
+  
+  const services = [
+    {
+      icon: Design,
+      title: "Web Design",
+      description: "Creating modern, responsive designs with focus on user experience and aesthetics"
+    },
+    {
+      icon: Development,
+      title: "Web Development",
+      description: "Building scalable web applications using React, Django, and modern technologies"
+    },
+    {
+      icon: Mobile,
+      title: "Mobile Apps",
+      description: "Developing cross-platform mobile applications with React Native"
+    },
+    {
+      icon: Camera,
+      title: "UI/UX Design",
+      description: "Designing intuitive user interfaces and seamless user experiences"
+    }
+  ];
+
   return (
-    <div id="Home">
-      <div className="home">
-        <div className={`home-container-1 ${expanded ? "expanded" : ""}`}>
-          <div className="profile-card">
-            <img src={profile} alt="profile" className="profile-pic" />
-            <div className="intro">
-              <h2 className="name">Muhammed <span>Nihal</span> K</h2>
-              <p>Full-Stack Developer</p>
+    <div id="home">
+      <div className="home-container">
+        {/* Left Sidebar */}
+        <div className={`home-sidebar ${expanded ? "expanded" : ""}`}>
+          <div className="profile-section">
+            <div className="profile-image-container">
+              <img src={profile} alt="Muhammed Nihal K" className="profile-image" />
+              <div className="profile-status"></div>
             </div>
-            <button className="expand-1" onClick={() => setExpanded(!expanded)}>
-              {expanded ? "Show Less" : "Show More"}
-            </button>
-            <button className="expand-2" onClick={() => setExpanded(!expanded)}>
-              <img src={expanded ? Up : Down} alt="toggle" className="expand-icon" />
+            
+            <div className="profile-info">
+              <h1 className="profile-name">
+                Muhammed <span className="name-accent">Nihal</span> K
+              </h1>
+              <p className="profile-title">Full-Stack Developer</p>
+              <p className="profile-tagline">Building digital experiences that matter</p>
+            </div>
+
+            <button 
+              className="expand-toggle"
+              onClick={() => setExpanded(!expanded)}
+            >
+              <span>{expanded ? "Show Less" : "Show More"}</span>
+              <img src={expanded ? Up : Down} alt="toggle" />
             </button>
           </div>
-          <div className="contact">
-            <div className="cont">
-              <img src={mail} alt="mail" />
-              <div>
-                <h6>E-MAIL</h6>
-                <p><a href="mailto:nihalkatteripc@gmail.com" className="c">nihalkatteripc@gmail.com</a></p>
+
+          <div className="contact-section">
+            <div className="contact-item">
+              <div className="contact-icon">
+                <img src={mail} alt="Email" />
+              </div>
+              <div className="contact-info">
+                <label>Email</label>
+                <a href="mailto:nihalkatteripc@gmail.com">nihalkatteripc@gmail.com</a>
               </div>
             </div>
-            <div className="cont">
-              <a href="tel:+916282455711"><img src={phone} alt="phone" /></a>
-              <div>
-                <h6>PHONE</h6>
-                <p><a href="tel:+916282455711">+91 6282455711</a></p>
+
+            <div className="contact-item">
+              <div className="contact-icon">
+                <img src={phone} alt="Phone" />
+              </div>
+              <div className="contact-info">
+                <label>Phone</label>
+                <a href="tel:+916282455711">+91 6282455711</a>
               </div>
             </div>
-            <div className="cont">
-              <img src={location} alt="location" />
-              <div>
-                <h6>LOCATION</h6>
-                <p>Kannur, Kerala, INDIA</p>
+
+            <div className="contact-item">
+              <div className="contact-icon">
+                <img src={location} alt="Location" />
+              </div>
+              <div className="contact-info">
+                <label>Location</label>
+                <span>Kannur, Kerala, India</span>
               </div>
             </div>
           </div>
-          <div className="social">
-            <a href="https://github.com/Nihal369"><img src={Github} alt="" /></a>
-            <a href=""><img src={Twitter} alt="" /></a>
-            <a href=""><img src={Instagram} alt="" /></a>
-              
-              
-              
+
+          <div className="social-section">
+            <div className="social-links">
+              <a href="https://github.com/Nihal369" className="social-link" target="_blank" rel="noopener noreferrer">
+                <img src={Github} alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+              <a href="#" className="social-link">
+                <img src={Twitter} alt="Twitter" />
+                <span>Twitter</span>
+              </a>
+              <a href="#" className="social-link">
+                <img src={Instagram} alt="Instagram" />
+                <span>Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
 
+        {/* Main Content */}
+        <div className="home-main">
+          {/* Hero Section */}
+          <section className="hero-section">
+            <div className="hero-content">
+              <div className="welcome-badge">
+                <span>👋 Welcome to my portfolio</span>
+              </div>
+              <h1 className="hero-title">
+                Crafting <span className="highlight">Digital Experiences</span> 
+                <br />That Make an Impact
+              </h1>
+              <p className="hero-description">
+                I'm a passionate Full-Stack Developer specializing in modern web technologies. 
+                I build scalable applications with clean code, intuitive design, and exceptional 
+                user experiences.
+              </p>
+              <div className="hero-stats">
+                <div className="stat">
+                  <span className="stat-number">10+</span>
+                  <span className="stat-label">Projects</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-number">2+</span>
+                  <span className="stat-label">Years Learning</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-number">5+</span>
+                  <span className="stat-label">Technologies</span>
+                </div>
+              </div>
+            </div>
+          </section>
 
-        <div className="home-container-2">
-          <div className="intro">
-            <h2 className="about">About</h2>
-            <div className="saprator"></div>
-            <p>I’m Muhammed Nihal K, a passionate Full-Stack Developer specializing in React and Django. 
-              I enjoy building modern, scalable web applications with clean UI/UX and solid backend systems. 
-              Currently, I’m sharpening my skills through real-world projects, with a long-term vision to 
-              work at top global companies like Google or Microsoft. I value continuous learning, problem-solving, 
-              and creating technology that makes life easier.</p>
-          </div>
-          {/* <div className="skills">
-            <div className="skill-card">React</div>
-            <div className="skill-card">Django</div>
-            <div className="skill-card">JavaScript</div>
-            <div className="skill-card">Python</div>
-            <div className="skill-card">MongoDB</div>
-          </div> */}
+          {/* About Section */}
+          <section className="about-section">
+            <div className="section-header">
+              <h2>About Me</h2>
+              <div className="section-divider"></div>
+            </div>
+            <div className="about-content">
+              <p>
+                I'm <strong>Muhammed Nihal K</strong>, a dedicated Full-Stack Developer with expertise in 
+                <strong> React</strong> and <strong>Django</strong>. I thrive on transforming complex problems 
+                into elegant, user-friendly solutions.
+              </p>
+              <p>
+                My journey in web development started with curiosity and has evolved into a passion for 
+                creating technology that makes life easier. I'm constantly learning and adapting to new 
+                technologies while maintaining a strong foundation in software engineering principles.
+              </p>
+              <p>
+                My goal is to contribute to innovative projects at leading tech companies while growing 
+                as a developer and making a positive impact through technology.
+              </p>
+            </div>
+          </section>
 
-
-          <div className="work">
-            <h2 className="about">What I'm Doing</h2>
-            <div className="saprator"></div>
-            <div className="service">
-              <img className="service-logo" src={Design} alt="" />
-              <div>
-                <h4>Web design</h4>
-                <p>The most modern and high-quality design made at a professional level.</p>
-              </div>
+          {/* Services Section */}
+          <section className="services-section">
+            <div className="section-header">
+              <h2>What I Do</h2>
+              <div className="section-divider"></div>
             </div>
-            <div className="service">
-              <img className="service-logo" src={Development} alt="" />
-              <div>
-                <h4>Web development</h4>
-                <p>High-quality development of sites at the professional level.</p>
-              </div>
+            <div className="services-grid">
+              {services.map((service, index) => (
+                <div className="service-card" key={index}>
+                  <div className="service-icon">
+                    <img src={service.icon} alt={service.title} />
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="service">
-              <img className="service-logo" src={Mobile} alt="" />
-              <div>
-                <h4>Mobile apps</h4>
-                <p>Professional development of applications for iOS and Android.</p>
-              </div>
-            </div>
-            <div className="service">
-              <img className="service-logo" src={Camera} alt="" />
-              <div>
-                <h4>Photography</h4>
-                <p>I make high-quality photos of any category at a professional level</p>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
-    
-    
   );
 };
 
